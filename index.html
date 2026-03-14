@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Sidebar -->
+    <nav class="sidebar">
+        <div class="logo">
+            <i class="fab fa-instagram"></i>
+            <span class="logo-text">Instagram</span>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item active" data-page="home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </li>
+            <li class="nav-item" data-page="search">
+                <i class="fas fa-search"></i>
+                <span>Search</span>
+            </li>
+            <li class="nav-item" data-page="explore">
+                <i class="far fa-compass"></i>
+                <span>Explore</span>
+            </li>
+            <li class="nav-item" data-page="reels">
+                <i class="fas fa-film"></i>
+                <span>Reels</span>
+            </li>
+            <li class="nav-item" data-page="messages">
+                <i class="far fa-paper-plane"></i>
+                <span>Messages</span>
+                <span class="notification-badge">3</span>
+            </li>
+            <li class="nav-item" data-page="notifications">
+                <i class="far fa-heart"></i>
+                <span>Notifications</span>
+            </li>
+            <li class="nav-item" data-page="create">
+                <i class="far fa-plus-square"></i>
+                <span>Create</span>
+            </li>
+            <li class="nav-item" data-page="profile">
+                <img src="img/myprofile.jpg" class="nav-profile-img" alt="Profile">
+                <span>Profile</span>
+            </li>
+        </ul>
+        
+        <div class="nav-bottom">
+            <li class="nav-item" data-page="more">
+                <i class="fas fa-bars"></i>
+                <span>More</span>
+            </li>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Stories Section -->
+        <section class="stories-container">
+            <div class="stories-wrapper">
+                <div class="story-item add-story">
+                    <div class="story-ring">
+                        <img src="img/myprofile.jpg" alt="Your Story">
+                        <div class="add-icon">+</div>
+                    </div>
+                    <span class="story-username">Your story</span>
+                </div>
+                <!-- Stories will be populated by JS -->
+            </div>
+        </section>
+
+        <!-- Posts Feed -->
+        <section class="feed-container">
+            <!-- Posts will be populated by JS -->
+        </section>
+    </main>
+
+    <!-- Right Sidebar (Suggestions) -->
+    <aside class="right-sidebar">
+        <div class="user-profile-mini">
+            <img src="img/myprofile.jpg" alt="Current User">
+            <div class="user-info">
+                <span class="username">zechris28</span>
+                <span class="fullname">Zeus Christian Aggabao</span>
+            </div>
+            <button class="switch-btn">Switch</button>
+        </div>
+
+        <div class="suggestions-header">
+            <span>Suggestions for you</span>
+            <button class="see-all-btn">See All</button>
+        </div>
+
+        <div class="suggestions-list">
+            <!-- Suggestions populated by JS -->
+        </div>
+
+        <footer class="sidebar-footer">
+            <p>About • Help • Press • API • Jobs • Privacy • Terms • Locations • Language</p>
+            <p>© 2026 Instagram Clone</p>
+        </footer>
+    </aside>
+
+    <!-- Create Post Modal -->
+    <div class="modal" id="createModal">
+        <div class="modal-content create-post-modal">
+            <div class="modal-header">
+                <h3>Create new post</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="upload-area">
+                    <i class="fas fa-photo-video"></i>
+                    <p>Drag photos and videos here</p>
+                    <button class="select-btn">Select from computer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Story Viewer Modal -->
+    <div class="modal" id="storyModal">
+        <div class="story-viewer">
+            <div class="story-progress">
+                <div class="progress-bar active"></div>
+            </div>
+            <div class="story-header">
+                <img src="" alt="Story User" class="story-user-img">
+                <span class="story-user-name"></span>
+                <span class="story-time">2h</span>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="story-content">
+                <img src="" alt="Story">
+            </div>
+            <div class="story-footer">
+                <input type="text" placeholder="Send message" class="story-input">
+                <i class="far fa-heart"></i>
+                <i class="far fa-paper-plane"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div class="modal" id="lightboxModal">
+        <div class="lightbox-content">
+            <button class="close-modal">&times;</button>
+            <img src="" alt="Full size">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
